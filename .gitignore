@@ -1,0 +1,66 @@
+ 
+# Android/IntelliJ IDEA project files
+.idea/
+*.iml
+.gradle/
+local.properties
+
+# Gradle files
+.gradle/
+build/
+
+# Android build directories
+*/build/
+
+# NDK
+*.so
+*.a
+*.o
+
+# Generated files
+gen/
+out/
+
+# IntelliJ IDEA / Android Studio specific
+.idea/
+*.iml
+*.hprof
+.DS_Store
+Thumbs.db
+
+# Windows Installer files
+ehthumbs.db
+
+# Android Studio navigation files
+.navigation/
+
+# JetBrains IDE configuration
+.idea/
+
+# Gradle wrapper files
+gradle-wrapper.jar
+gradle-wrapper.properties
+gradle/
+
+# Android Studio caches
+*.log
+*.tmp
+
+# Android SDK
+sdk/
+
+# Android NDK
+# This is only for NDK-based projects, you can safely ignore this if you are not using NDK
+obj/
+
+# Files for Firebase or similar services
+google-services.json
+firebase-debug.log
+
+# Keystore files for signing Android APKs (keep it secret)
+*.jks
+*.keystore
+
+# Temporary files
+*.log
+*.tmp
