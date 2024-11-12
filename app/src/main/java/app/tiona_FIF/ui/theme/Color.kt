@@ -16,6 +16,8 @@ val Pink40 = Color(0xFF7D5260)
 val primaryLight  = Color(0xFF1576FB)
 val secondaryLight = Color(0xFF59DFAA)
 val tertiaryLight = Color(0xFF48C5FB)
+val backgroundLight = Color(0xFFF7FAFF)
+
 val white = Color(0xFFFFFFFF)
 
 object CustomColors {
@@ -30,4 +32,8 @@ object CustomColors {
     val tertiary : Color
         @Composable
         get() = if (isSystemInDarkTheme()) tertiaryLight else tertiaryLight
+
+    val background : Color
+        @Composable
+        get() = if(isSystemInDarkTheme()) backgroundLight else backgroundLight
 }
