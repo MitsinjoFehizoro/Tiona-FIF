@@ -1,46 +1,60 @@
-package app.tiona_FIF.ui.screen
+package app.tiona_FIF.ui.composable.homeScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import app.tiona_FIF.ui.composable.loadingScreen.Logo
 import app.tiona_FIF.ui.theme.CustomColors
 
 @Composable
-fun LoadingScreen(){
+fun LongBackgroundStyle(){
     ConstraintLayout(
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxWidth()
+            .fillMaxHeight(.5f)
+            .clip(
+                RoundedCornerShape(
+                    topStart = 0.dp,
+                    topEnd = 0.dp,
+                    bottomStart = 44.dp,
+                    bottomEnd = 44.dp
+                )
+            )
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
                         CustomColors.secondary,
+                        CustomColors.secondary,
                         CustomColors.tertiary
                     ),
-                    start = Offset(1000f, 200f),
-                    end = Offset(0f, 800f),
+                    start = Offset(800f, 0f),
+                    end = Offset(200f, 1000f)
                 )
-            ),
-    ) {
-        val (roundRef, logoRef) = createRefs()
+            )
+    ){
+        val (roundRef) = createRefs()
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
-                .clip(CircleShape)
+                .clip(
+                    RoundedCornerShape(
+                        topStartPercent = 0,
+                        topEndPercent = 50,
+                        bottomEndPercent = 50,
+                        bottomStartPercent = 50
+                    )
+                )
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
@@ -51,24 +65,10 @@ fun LoadingScreen(){
                 )
                 .constrainAs(roundRef) {
                     end.linkTo(parent.end, margin = 32.dp)
-                    centerVerticallyTo(parent)
+                    top.linkTo(parent.top, margin = -32.dp)
                 }
         )
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .constrainAs(logoRef) {
-                    centerVerticallyTo(parent)
-                }
-        ) {
-           Logo()
-        }
 
     }
-}
 
-@Composable
-@Preview(showSystemUi = true, showBackground = true)
-fun LoadingScreenPreview(){
-    LoadingScreen()
 }

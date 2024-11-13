@@ -19,6 +19,7 @@ val tertiaryLight = Color(0xFF48C5FB)
 val backgroundLight = Color(0xFFF7FAFF)
 
 val white = Color(0xFFFFFFFF)
+val black = Color(0xFF000000)
 
 object CustomColors {
     val primary : Color
