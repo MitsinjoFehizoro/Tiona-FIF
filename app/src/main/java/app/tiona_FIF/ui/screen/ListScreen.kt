@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.tiona_FIF.R
 import app.tiona_FIF.ui.composable.homeScreen.Footer
+import app.tiona_FIF.ui.composable.listScreen.ListItem
 import app.tiona_FIF.ui.composable.listScreen.ShortBackgroundStyle
 import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.black
@@ -66,43 +67,6 @@ fun ListContent (){
     }
 
 }
-
-@Composable
-fun ListItem(){
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 8.dp)
-    ){
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(44.dp)
-                .clip(shape = RoundedCornerShape(12.dp))
-                .background(
-                    color = white
-                ),
-            verticalAlignment = Alignment.CenterVertically
-        ){
-            Spacer(modifier = Modifier.width(16.dp))
-            Image(
-                painter = painterResource(id = R.drawable.note),
-                contentDescription = null,
-                modifier = Modifier.width(24.dp)
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = "1 - Andriamanitra fitiavana",
-                fontSize = 14.sp,
-                color = black.copy(alpha = .6f)
-            )
-        }
-    }
-
-}
-
-
-
 
 
 @Composable
