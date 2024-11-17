@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -66,7 +67,7 @@ fun HomeContent (){
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(.83f)
+                .weight(1f)
                 .padding(top = 18.dp)
                 .padding(horizontal = 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -76,6 +77,7 @@ fun HomeContent (){
             Logo()
             Menu()
         }
+        Spacer(modifier = Modifier.height(8.dp))
         Footer()
     }
 

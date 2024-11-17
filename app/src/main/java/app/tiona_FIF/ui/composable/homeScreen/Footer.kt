@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.DateRange
@@ -31,10 +32,10 @@ fun Footer(){
         modifier = Modifier
             .fillMaxWidth()
             .height(86.dp)
-            .clip(CircleShape)
+            .clip(shape = RoundedCornerShape(topStartPercent = 50, topEndPercent = 50))
             .shadow(
                 elevation = 8.dp,
-                shape = CircleShape,
+                shape = RoundedCornerShape(topStartPercent = 50, topEndPercent = 50),
                 ambientColor = CustomColors.tertiary.copy(alpha = .6f),
                 spotColor = CustomColors.tertiary.copy(alpha = .6f)
             ),
@@ -44,7 +45,7 @@ fun Footer(){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(76.dp)
-                .clip(CircleShape)
+                .clip(shape = RoundedCornerShape(topStartPercent = 50, topEndPercent = 50))
                 .background(
                     color = white
                 ),
