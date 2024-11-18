@@ -1,9 +1,7 @@
 package app.tiona_FIF.ui.composable.listScreen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -22,7 +20,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import app.tiona_FIF.ui.composable.baseScreen.Header
 import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.black
 import app.tiona_FIF.ui.theme.white
@@ -30,16 +27,12 @@ import app.tiona_FIF.ui.theme.white
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HeaderAndSearch(){
-    Column(
+fun Search(){
+    Box (
         modifier = Modifier
-            .fillMaxSize()
-            .padding(top = 18.dp, bottom = 36.dp)
-            .padding(horizontal = 32.dp),
-        verticalArrangement = Arrangement.SpaceBetween
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp)
     ) {
-        Header(title = "Fihirana Fifohazana")
-
         ConstraintLayout(
             modifier = Modifier
                 .fillMaxWidth()
@@ -79,6 +72,5 @@ fun HeaderAndSearch(){
                 ),
             )
         }
-
     }
 }

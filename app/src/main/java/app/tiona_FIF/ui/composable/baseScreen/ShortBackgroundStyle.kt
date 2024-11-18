@@ -13,7 +13,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import app.tiona_FIF.ui.composable.listScreen.HeaderAndSearch
 import app.tiona_FIF.ui.theme.CustomColors
 
 
@@ -42,7 +41,7 @@ fun ShortBackgroundStyle(){
                 )
             )
     ){
-        val (roundRef) = createRefs()
+       val roundRef = createRef()
         Box(
             modifier = Modifier
                 .size(320.dp, 300.dp)
@@ -67,7 +66,6 @@ fun ShortBackgroundStyle(){
                     bottom.linkTo(parent.bottom, margin = 48.dp)
                 }
         )
-        HeaderAndSearch()
     }
 
 }

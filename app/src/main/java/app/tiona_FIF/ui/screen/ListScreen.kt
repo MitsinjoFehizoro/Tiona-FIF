@@ -15,20 +15,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import app.tiona_FIF.ui.composable.baseScreen.BaseScreen
 import app.tiona_FIF.ui.composable.baseScreen.Footer
+import app.tiona_FIF.ui.composable.baseScreen.Header
 import app.tiona_FIF.ui.composable.listScreen.ListItem
 import app.tiona_FIF.ui.composable.baseScreen.ShortBackgroundStyle
+import app.tiona_FIF.ui.composable.listScreen.Search
 import app.tiona_FIF.ui.theme.CustomColors
 
 
 @Composable
 fun ListScreen () {
-    Column (
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = CustomColors.background)
+    BaseScreen(
+        isLongBackgroundStyle = false ,
+        headerTitle = "Fihirana Fifohazana"
     ) {
-        ShortBackgroundStyle()
         ListContent()
     }
 }
@@ -39,6 +40,9 @@ fun ListContent (){
         modifier = Modifier
             .fillMaxSize()
     ) {
+        Spacer(modifier = Modifier.height(48.dp))
+        Search()
+        Spacer(modifier = Modifier.height(38.dp))
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -52,7 +56,6 @@ fun ListContent (){
                 ListItem()
             }
         }
-        Footer()
     }
 
 }
