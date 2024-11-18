@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import app.tiona_FIF.ui.composable.homeScreen.Header
+import app.tiona_FIF.ui.composable.baseScreen.Header
 import app.tiona_FIF.ui.composable.loadingScreen.Logo
 
 

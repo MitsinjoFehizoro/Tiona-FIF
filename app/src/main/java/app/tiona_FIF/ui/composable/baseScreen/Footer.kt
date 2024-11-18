@@ -1,4 +1,4 @@
-package app.tiona_FIF.ui.composable.homeScreen
+package app.tiona_FIF.ui.composable.baseScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

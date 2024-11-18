@@ -3,6 +3,7 @@ package app.tiona_FIF
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import app.tiona_FIF.ui.navigation.Navigation
 import app.tiona_FIF.ui.screen.HomeScreen
 import app.tiona_FIF.ui.screen.InfoScreen
 import app.tiona_FIF.ui.screen.ListScreen
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TionaFIFTheme {
-               InfoScreen()
+               Navigation()
             }
         }
     }

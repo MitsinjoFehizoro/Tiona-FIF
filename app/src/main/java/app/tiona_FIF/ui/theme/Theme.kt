@@ -57,7 +57,7 @@ fun TionaFIFTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = tertiaryLight.copy(alpha = .8f).toArgb()
+            window.statusBarColor = secondaryLight.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }

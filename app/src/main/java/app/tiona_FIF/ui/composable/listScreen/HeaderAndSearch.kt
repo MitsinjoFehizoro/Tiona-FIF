@@ -22,7 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import app.tiona_FIF.ui.composable.homeScreen.Header
+import app.tiona_FIF.ui.composable.baseScreen.Header
 import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.black
 import app.tiona_FIF.ui.theme.white
