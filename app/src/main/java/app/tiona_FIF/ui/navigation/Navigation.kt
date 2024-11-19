@@ -12,7 +12,7 @@ import app.tiona_FIF.ui.screen.ListScreen
 fun Navigation () {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Route.InfoScreen.itineraire ) {
+    NavHost(navController = navController, startDestination = Route.HomeScreen.itineraire ) {
         composable(route = Route.HomeScreen.itineraire){
             HomeScreen()
         }

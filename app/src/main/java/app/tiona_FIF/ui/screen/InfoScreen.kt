@@ -63,7 +63,7 @@ fun InfoContent () {
                 modifier = Modifier
                     .fillMaxSize()
                     .constrainAs(ref) {
-                        top.linkTo(parent.top, margin = -24.dp)
+                        top.linkTo(parent.top, margin = -24 .dp)
                     }
             ) {
                 Contact()
