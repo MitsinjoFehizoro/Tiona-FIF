@@ -27,7 +27,10 @@ import app.tiona_FIF.ui.theme.CustomColors
 
 
 @Composable
-fun ListScreen (navController: NavController) {
+fun ListScreen (
+    type : String,
+    navController: NavController
+) {
     BaseScreen(
         isLongBackgroundStyle = false ,
         headerTitle = "Fihirana Fifohazana",
@@ -67,5 +70,5 @@ fun ListContent (){
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun ListScreenPreview(){
-    ListScreen(navController = NavController(LocalContext.current))
+    ListScreen(type = "FFPM", navController = NavController(LocalContext.current))
 }

@@ -56,7 +56,7 @@ fun ShortBackgroundStyle(){
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            CustomColors.primary.copy(alpha = .4f),
+                            CustomColors.primary.copy(alpha = .2f),
                             CustomColors.primary
                         )
                     )

@@ -35,13 +35,13 @@ fun Menu (navController: NavController){
             title = "Fihirana Fifohazana",
             subtitle = "Ahitana hira miisa",
             id_icon = R.drawable.music_solid,
-            onClick = {navController.navigate(Route.ListScreen.itineraire)}
+            onClick = {navController.navigate("${Route.ListScreen.itineraire}/FIF")}
         )
         CardMenu(
             title = "Fihirana FFPM",
             subtitle = "Ireo hira zafindraony",
             id_icon = R.drawable.book_open_solid,
-            onClick = { navController.navigate(Route.ListScreen.itineraire) }
+            onClick = { navController.navigate("${Route.ListScreen.itineraire}/FFPM") }
         )
         CardMenu(
             title = "Tsara Ho Fantatra",

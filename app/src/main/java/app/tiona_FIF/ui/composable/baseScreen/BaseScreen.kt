@@ -40,7 +40,7 @@ fun BaseScreen (
             ) {
                 content()
             }
-            Footer()
+            Footer(navController)
         }
     }
 }
