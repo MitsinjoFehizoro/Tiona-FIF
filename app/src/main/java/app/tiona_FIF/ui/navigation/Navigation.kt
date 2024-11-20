@@ -14,13 +14,13 @@ fun Navigation () {
 
     NavHost(navController = navController, startDestination = Route.HomeScreen.itineraire ) {
         composable(route = Route.HomeScreen.itineraire){
-            HomeScreen()
+            HomeScreen(navController = navController)
         }
         composable(route = Route.ListScreen.itineraire){
-            ListScreen()
+            ListScreen(navController = navController)
         }
         composable(route = Route.InfoScreen.itineraire){
-            InfoScreen()
+            InfoScreen(navController = navController)
         }
     }
 }

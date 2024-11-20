@@ -26,18 +26,19 @@ import app.tiona_FIF.ui.composable.loadingScreen.Logo
 import app.tiona_FIF.ui.theme.CustomColors
 
 @Composable
-fun HomeScreen () {
+fun HomeScreen (navController: NavController) {
     BaseScreen(
         isLongBackgroundStyle = true,
-        headerTitle = "Tongasoa"
+        headerTitle = "Tongasoa",
+        navController = navController
     ) {
-        HomeContent()
+        HomeContent(navController = navController)
     }
 }
 
 
 @Composable
-fun HomeContent (){
+fun HomeContent (navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -46,12 +47,12 @@ fun HomeContent (){
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
         Logo()
-        Menu()
+        Menu(navController = navController)
     }
 }
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun HomeScreenPreview(){
-    HomeScreen()
+    HomeScreen( navController = NavController(LocalContext.current))
 }

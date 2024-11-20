@@ -16,10 +16,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import app.tiona_FIF.ui.navigation.Route
 import app.tiona_FIF.ui.theme.white
 
 @Composable
-fun Header (title : String){
+fun Header (
+    title : String,
+    navController : NavController
+){
     Row(
         modifier = Modifier
             .padding(top = 18.dp)
@@ -28,7 +33,9 @@ fun Header (title : String){
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ){
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(
+            onClick = { navController.popBackStack() }
+        ) {
             Icon(
                 imageVector = Icons.Default.KeyboardArrowLeft,
                 contentDescription = null,
@@ -41,7 +48,9 @@ fun Header (title : String){
             fontWeight = FontWeight.Bold,
             color = white.copy(alpha = .6f)
         )
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(
+            onClick = { navController.navigate(Route.InfoScreen.itineraire) }
+        ) {
             Icon(
                 imageVector = Icons.Default.Info,
                 contentDescription = null,

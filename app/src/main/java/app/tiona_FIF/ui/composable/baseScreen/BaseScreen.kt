@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavController
 import app.tiona_FIF.ui.theme.CustomColors
 
 
@@ -14,6 +15,7 @@ import app.tiona_FIF.ui.theme.CustomColors
 fun BaseScreen (
     isLongBackgroundStyle : Boolean,
     headerTitle: String,
+    navController: NavController,
     content : @Composable () -> Unit
 ) {
     ConstraintLayout (
@@ -30,7 +32,7 @@ fun BaseScreen (
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            Header(title = headerTitle)
+            Header(title = headerTitle, navController = navController)
             Column (
                 modifier = Modifier
                     .fillMaxWidth()

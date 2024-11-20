@@ -13,8 +13,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import app.tiona_FIF.ui.composable.baseScreen.BaseScreen
 import app.tiona_FIF.ui.composable.baseScreen.Footer
 import app.tiona_FIF.ui.composable.baseScreen.Header
@@ -25,10 +27,11 @@ import app.tiona_FIF.ui.theme.CustomColors
 
 
 @Composable
-fun ListScreen () {
+fun ListScreen (navController: NavController) {
     BaseScreen(
         isLongBackgroundStyle = false ,
-        headerTitle = "Fihirana Fifohazana"
+        headerTitle = "Fihirana Fifohazana",
+        navController = navController
     ) {
         ListContent()
     }
@@ -64,5 +67,5 @@ fun ListContent (){
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun ListScreenPreview(){
-    ListScreen()
+    ListScreen(navController = NavController(LocalContext.current))
 }

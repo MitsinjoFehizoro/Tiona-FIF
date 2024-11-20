@@ -1,6 +1,7 @@
 package app.tiona_FIF.ui.composable.homeScreen
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,20 +26,25 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.tiona_FIF.R
 import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.black
 import app.tiona_FIF.ui.theme.white
 
 
 @Composable
-fun CardMenu(){
+fun CardMenu(
+    title : String,
+    subtitle : String,
+    id_icon : Int,
+    onClick : () -> Unit,
+){
     Row (
         modifier = Modifier
             .fillMaxWidth()
             .height(76.dp)
             .clip(shape = RoundedCornerShape(8.dp))
             .background(white)
+            .clickable { onClick() }
             .padding(10.dp)
     ){
         Box (
@@ -50,7 +56,7 @@ fun CardMenu(){
             contentAlignment = Alignment.Center
         ) {
             Icon(
-                painter = painterResource(id = R.drawable.music_solid),
+                painter = painterResource(id = id_icon),
                 contentDescription = null, tint = white,
                 modifier = Modifier.size(22.dp)
             )
@@ -62,7 +68,7 @@ fun CardMenu(){
             verticalArrangement = Arrangement.SpaceAround
         ) {
             Text(
-                text = "Fihirana Fifohazana",
+                text = title,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
                 color = black.copy(alpha = .6f)
@@ -73,7 +79,7 @@ fun CardMenu(){
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Ahitana hira miisa",
+                    text = subtitle,
                     fontSize = 14.sp,
                     color = black.copy(alpha = .5f)
                 )

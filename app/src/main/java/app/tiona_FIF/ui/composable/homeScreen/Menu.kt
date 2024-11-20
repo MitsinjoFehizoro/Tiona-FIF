@@ -9,11 +9,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.white
+import app.tiona_FIF.R
+import app.tiona_FIF.ui.navigation.Route
 
 @Composable
-fun Menu (){
+fun Menu (navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -28,8 +31,23 @@ fun Menu (){
             )
             .padding(vertical = 32.dp, horizontal = 24.dp)
     ) {
-        CardMenu()
-        CardMenu()
-        CardMenu()
+        CardMenu(
+            title = "Fihirana Fifohazana",
+            subtitle = "Ahitana hira miisa",
+            id_icon = R.drawable.music_solid,
+            onClick = {navController.navigate(Route.ListScreen.itineraire)}
+        )
+        CardMenu(
+            title = "Fihirana FFPM",
+            subtitle = "Ireo hira zafindraony",
+            id_icon = R.drawable.book_open_solid,
+            onClick = { navController.navigate(Route.ListScreen.itineraire) }
+        )
+        CardMenu(
+            title = "Tsara Ho Fantatra",
+            subtitle = "Mahakasika ity app ity",
+            id_icon = R.drawable.circle_info_solid,
+            onClick = { navController.navigate(Route.InfoScreen.itineraire) }
+        )
     }
 }
