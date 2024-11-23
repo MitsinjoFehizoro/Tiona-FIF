@@ -52,7 +52,7 @@ fun CardMenu(
                 .fillMaxHeight()
                 .aspectRatio(1f)
                 .clip(shape = RoundedCornerShape(8.dp))
-                .background(color = CustomColors.primary),
+                .background(color = CustomColors().primary),
             contentAlignment = Alignment.Center
         ) {
             Icon(
@@ -87,7 +87,7 @@ fun CardMenu(
                     modifier = Modifier
                         .width(36.dp)
                         .background(
-                            color = CustomColors.primary,
+                            color = CustomColors().primary,
                             shape = RoundedCornerShape(4.dp)
                         )
                         .clip(shape = RoundedCornerShape(4.dp)),

@@ -33,8 +33,8 @@ fun ShortBackgroundStyle(){
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        CustomColors.secondary,
-                        CustomColors.tertiary
+                        CustomColors().secondary,
+                        CustomColors().tertiary
                     ),
                     start = Offset(400f, 0f),
                     end = Offset(200f, 800f)
@@ -56,8 +56,8 @@ fun ShortBackgroundStyle(){
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            CustomColors.primary.copy(alpha = .2f),
-                            CustomColors.primary
+                            CustomColors().primary.copy(alpha = .2f),
+                            CustomColors().primary
                         )
                     )
                 )

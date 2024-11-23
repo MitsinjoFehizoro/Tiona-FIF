@@ -33,9 +33,9 @@ fun LongBackgroundStyle(){
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        CustomColors.secondary,
-                        CustomColors.secondary,
-                        CustomColors.tertiary
+                        CustomColors().secondary,
+                        CustomColors().secondary,
+                        CustomColors().tertiary
                     ),
                     start = Offset(800f, 0f),
                     end = Offset(200f, 1000f)
@@ -58,8 +58,8 @@ fun LongBackgroundStyle(){
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            CustomColors.primary.copy(alpha = .2f),
-                            CustomColors.primary
+                            CustomColors().primary.copy(alpha = .2f),
+                            CustomColors().primary
                         )
                     )
                 )

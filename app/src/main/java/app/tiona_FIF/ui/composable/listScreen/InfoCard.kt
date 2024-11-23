@@ -42,7 +42,7 @@ fun InfoCard () {
             Icon(
                 painter = painterResource(id = R.drawable.circle_exclamation_solid),
                 contentDescription = null,
-                tint = CustomColors.secondary,
+                tint = CustomColors().secondary,
                 modifier = Modifier
                     .size(36.dp)
             )
@@ -52,7 +52,7 @@ fun InfoCard () {
                 .fillMaxWidth()
                 .height(36.dp)
                 .background(
-                    color = CustomColors.secondary,
+                    color = CustomColors().secondary,
                     shape = RoundedCornerShape(8.dp)
                 ),
             contentAlignment = Alignment.Center

@@ -45,7 +45,7 @@ fun Search(){
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = null,
-                tint = CustomColors.tertiary,
+                tint = CustomColors().tertiary,
                 modifier = Modifier
                     .constrainAs(iconRef){
                         centerVerticallyTo(parent)
@@ -63,7 +63,7 @@ fun Search(){
                 colors = TextFieldDefaults.textFieldColors(
                     focusedIndicatorColor = Color.Transparent,
                     unfocusedIndicatorColor = Color.Transparent,
-                    cursorColor = CustomColors.tertiary,
+                    cursorColor = CustomColors().tertiary,
                     containerColor = Color.Transparent
                 ),
                 textStyle = TextStyle(

@@ -27,8 +27,8 @@ fun LoadingScreen(){
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        CustomColors.secondary,
-                        CustomColors.tertiary
+                        CustomColors().secondary,
+                        CustomColors().tertiary
                     ),
                     start = Offset(1000f, 200f),
                     end = Offset(0f, 800f),
@@ -44,8 +44,8 @@ fun LoadingScreen(){
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            CustomColors.primary.copy(alpha = .2f),
-                            CustomColors.primary
+                            CustomColors().primary.copy(alpha = .2f),
+                            CustomColors().primary
                         )
                     )
                 )

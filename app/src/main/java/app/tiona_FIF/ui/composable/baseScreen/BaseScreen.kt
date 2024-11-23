@@ -21,7 +21,7 @@ fun BaseScreen (
     ConstraintLayout (
         modifier = Modifier
             .fillMaxSize()
-            .background(color = CustomColors.background)
+            .background(color = CustomColors().background)
     ) {
         if(isLongBackgroundStyle) {
             LongBackgroundStyle()

@@ -36,8 +36,8 @@ fun Footer(navController: NavController){
             .shadow(
                 elevation = 8.dp,
                 shape = RoundedCornerShape(topStartPercent = 50, topEndPercent = 50),
-                ambientColor = CustomColors.tertiary.copy(alpha = .6f),
-                spotColor = CustomColors.tertiary.copy(alpha = .6f)
+                ambientColor = CustomColors().tertiary.copy(alpha = .6f),
+                spotColor = CustomColors().tertiary.copy(alpha = .6f)
             ),
         contentAlignment = Alignment.BottomCenter
     ) {
@@ -85,8 +85,8 @@ fun Footer(navController: NavController){
 @Composable
 fun Tint (isActive : Boolean) : Color {
     return if(isActive){
-        CustomColors.tertiary.copy(alpha = 1f)
+        CustomColors().tertiary.copy(alpha = 1f)
     } else {
-        CustomColors.tertiary.copy(alpha = .25f)
+        CustomColors().tertiary.copy(alpha = .25f)
     }
 }

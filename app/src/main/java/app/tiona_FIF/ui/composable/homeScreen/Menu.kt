@@ -26,7 +26,7 @@ fun Menu (navController: NavController){
                 shape = RoundedCornerShape(18.dp)
             )
             .background(
-                color = CustomColors.tertiary.copy(alpha = .12f),
+                color = CustomColors().tertiary.copy(alpha = .12f),
                 shape = RoundedCornerShape(18.dp)
             )
             .padding(vertical = 32.dp, horizontal = 24.dp)
