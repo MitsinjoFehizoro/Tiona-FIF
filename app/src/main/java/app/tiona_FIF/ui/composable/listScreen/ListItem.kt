@@ -19,6 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.tiona_FIF.R
+import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.black
 import app.tiona_FIF.ui.theme.white
 
@@ -36,7 +37,7 @@ fun ListItem(){
                 .height(44.dp)
                 .clip(shape = RoundedCornerShape(12.dp))
                 .background(
-                    color = white
+                    color = CustomColors().quaternary
                 ),
             verticalAlignment = Alignment.CenterVertically
         ){
@@ -50,7 +51,7 @@ fun ListItem(){
             Text(
                 text = "1 - Andriamanitra fitiavana",
                 fontSize = 14.sp,
-                color = black.copy(alpha = .6f)
+                color = CustomColors().typography.copy(alpha = .6f)
             )
         }
     }

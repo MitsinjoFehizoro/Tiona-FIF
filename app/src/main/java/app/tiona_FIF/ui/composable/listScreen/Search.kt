@@ -38,7 +38,7 @@ fun Search(){
                 .fillMaxWidth()
                 .height(48.dp)
                 .clip(CircleShape)
-                .background(color = white)
+                .background(color = CustomColors().quaternary)
                 .padding(horizontal = 18.dp)
         ){
             val (iconRef, fieldRef) = createRefs()
@@ -68,7 +68,7 @@ fun Search(){
                 ),
                 textStyle = TextStyle(
                     fontSize = 14.sp,
-                    color = black.copy(alpha = .6f)
+                    color = CustomColors().typography.copy(alpha = .6f)
                 ),
             )
         }

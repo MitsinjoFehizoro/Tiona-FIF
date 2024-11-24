@@ -1,4 +1,4 @@
-package app.tiona_FIF.ui.composable.listScreen
+package app.tiona_FIF.ui.composable.infoScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -29,7 +29,7 @@ fun InfoCard () {
             .size(136.dp)
             .clip(shape = RoundedCornerShape(8.dp))
             .background(
-                color = white,
+                color = CustomColors().quaternary,
                 shape = RoundedCornerShape(8.dp)
             )
     ) {
@@ -61,7 +61,7 @@ fun InfoCard () {
                 text = "TSY AZO AMIDY",
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = white
+                color = CustomColors().quaternary
             )
         }
     }

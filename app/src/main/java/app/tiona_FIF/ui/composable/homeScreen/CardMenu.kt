@@ -43,7 +43,7 @@ fun CardMenu(
             .fillMaxWidth()
             .height(76.dp)
             .clip(shape = RoundedCornerShape(8.dp))
-            .background(white)
+            .background(CustomColors().quaternary)
             .clickable { onClick() }
             .padding(10.dp)
     ){
@@ -71,7 +71,7 @@ fun CardMenu(
                 text = title,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
-                color = black.copy(alpha = .6f)
+                color = CustomColors().typography.copy(alpha = .6f)
             )
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -81,7 +81,7 @@ fun CardMenu(
                 Text(
                     text = subtitle,
                     fontSize = 14.sp,
-                    color = black.copy(alpha = .5f)
+                    color = CustomColors().typography.copy(alpha = .5f)
                 )
                 Box(
                     modifier = Modifier

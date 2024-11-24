@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import app.tiona_FIF.R
+import app.tiona_FIF.ui.theme.CustomColors
 import app.tiona_FIF.ui.theme.white
 
 
@@ -24,7 +25,7 @@ fun Contact () {
             .fillMaxWidth()
             .height(68.dp)
             .background(
-                color = white,
+                color = CustomColors().quaternary,
                 shape = RoundedCornerShape(8.dp)
             ),
         verticalAlignment = Alignment.CenterVertically,

@@ -47,7 +47,7 @@ fun Footer(navController: NavController){
                 .height(76.dp)
                 .clip(shape = RoundedCornerShape(topStartPercent = 50, topEndPercent = 50))
                 .background(
-                    color = white
+                    color = CustomColors().quaternary
                 ),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceEvenly

@@ -19,7 +19,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import app.tiona_FIF.ui.composable.baseScreen.BaseScreen
 import app.tiona_FIF.ui.composable.infoScreen.Contact
-import app.tiona_FIF.ui.composable.listScreen.InfoCard
+import app.tiona_FIF.ui.composable.infoScreen.InfoCard
 import app.tiona_FIF.ui.composable.loadingScreen.Logo
 
 @Composable
